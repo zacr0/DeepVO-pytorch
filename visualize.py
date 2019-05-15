@@ -26,7 +26,6 @@ def plot_route(gt, out, c_gt='g', c_out='r'):
 video_list = ['00', '02', '08', '09']
 video_list += ['01', '04', '05', '06', '07', '10']
 
-
 for video in video_list:
 	print('='*50)
 	print('Video {}'.format(video))

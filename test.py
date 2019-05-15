@@ -13,7 +13,8 @@ from helper import eulerAnglesToRotationMatrix
 
 if __name__ == '__main__':    
 
-	videos_to_test = ['04', '05', '07', '10', '09']
+	videos_to_test = ['04', '05', '07', '10', '09'] # original
+	videos_to_test += ['00', '01', '02', '06', '08'] # pmedina (SEQ 03 FAILS)
 
 	# Path
 	load_model_path = par.load_model_path   #choose the model you want to load
@@ -35,7 +36,7 @@ if __name__ == '__main__':
 
 
 	# Data
-	n_workers = 1
+	n_workers = 6 #pmedina (original = 1)
 	seq_len = int((par.seq_len[0]+par.seq_len[1])/2)
 	overlap = seq_len - 1
 	print('seq_len = {},  overlap = {}'.format(seq_len, overlap))
